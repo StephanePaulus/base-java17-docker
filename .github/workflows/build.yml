@@ -46,7 +46,8 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: stable
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
           build-args: |
             DOCKER_FILE_CREATED=${{ steps.date.outputs.date }}
 
