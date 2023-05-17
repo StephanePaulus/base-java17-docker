@@ -12,7 +12,7 @@ RUN $JAVA_HOME/bin/jlink \
 FROM debian:11-slim as debian
 
 #COPY ROOT certificate if needed
-COPY root-ca/* /usr/local/share/ca-certificates/home/
+#COPY root-ca/* /usr/local/share/ca-certificates/home/
 
 
 ARG DOCKER_FILE_CREATED
